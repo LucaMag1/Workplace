@@ -49,4 +49,3 @@ def supervisor():
     print("Supervisors:", *new_supervisor)
 supervisor()
 
-print("Hello world")
