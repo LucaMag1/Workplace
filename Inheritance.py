@@ -120,6 +120,63 @@ e2 = Employee()
 e2.set_name("Kai")
 print(e2.get_name())"""
 
+class School():
+    def __init__(self,name,level,numberofstudents):
+        self.name = name
+        self.level = level
+        self.numberofstudents = numberofstudents
+
+    def get_name(self):
+        return self.name
+
+    def get_level(self):
+        return self.level
+
+    def get_numberofstudents(self):
+        return self.numberofstudents
+
+    def __repr__(self):
+        return f"{self.name} is a {self.level} school with {self.numberofstudents} students"
+a = School("Lboro","Uni",40000)
+print(a.get_name())
+print(a.get_level())
+print(a.get_numberofstudents())
+print(a)
+
+class PrimarySchool(School):
+    def __init__(self,name,numberofstudents,pickuppolicy):
+        super().__init__(name,"Primary",numberofstudents)
+        self.pickuppolicy = pickuppolicy
+
+    def get_pickuppolicy(self):
+        return self.pickuppolicy
+
+    def __repr__(self):
+        schoolrepr = super().__repr__()
+        return schoolrepr + f" Pickup policy: {self.pickuppolicy}"
+
+b = PrimarySchool("JP", 250, "after 3pm")
+print(b.get_pickuppolicy())
+print(b.get_level())
+print(b)
+
+class HighSchool(School):
+    def __init__(self,name,numberofstudents,**sportsteams):
+        super().__init__(name,"High",numberofstudents)
+        self.sportsteams = sportsteams
+
+    def get_sportsteams(self):
+        return self.sportsteams
+
+    def __repr__(self):
+        return f"The availble sports teams are {self.sportsteams}"
+c = HighSchool("LFCG", 1000, Football= "A team, B Team", Tennis = "Div 1, Div 2" )
+print(c.get_sportsteams())
+print(c.get_name())
+print(c)
+
+
+
 
 
 
