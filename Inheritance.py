@@ -71,9 +71,7 @@ print(len(m1))"""
 
 
 #Abstraction meanse the class inheriting needs to use the abstracted function
-
 """from abc import ABC, abstractmethod
-
 class AbstractEmployee(ABC):
     new_id = 1
     def __init__(self):
@@ -120,6 +118,8 @@ e2 = Employee()
 e2.set_name("Kai")
 print(e2.get_name())"""
 
+
+#school programm
 class School():
     def __init__(self,name,level,numberofstudents):
         self.name = name
