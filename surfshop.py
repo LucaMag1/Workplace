@@ -1,10 +1,12 @@
 class TooManyBoardsError(Exception):
-    pass
+    def __str__(self):
+        return("Cannot have more than 4 surfboards in basket")
+
 
 class ShoppingCart():
     def __init__(self):
         self.num_surfboards = 0
-        self.locals_discount = True
+        self.locals_discount = False
 
     def add_surfboards(self,quantity=1):
         if self.num_surfboards + quantity > 4:
@@ -17,7 +19,8 @@ class ShoppingCart():
     def apply_locals_discount(self):
         pass
 
-
+a1 = ShoppingCart()
+print(a1.add_surfboards(4))
 
 
 
