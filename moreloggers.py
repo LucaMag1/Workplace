@@ -50,7 +50,7 @@ class Bar:
     def buy(self):
         try:
             choice = input("Please select a drink! ")
-            
+
 
 
 
