@@ -1,4 +1,5 @@
 # Workplace
+Quant_vola : Volatility clustering post shocks
 1moreloggers : loggers <br />
 1st :classes<br />
 coderestaurant: function arguments (args/kwargs)<br />
